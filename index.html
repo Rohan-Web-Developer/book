@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h1{
+            color: white;
+        }
+        #a {
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #b {
+            width: 500px;
+            height: 500px;
+            background-color: aliceblue;
+            clip-path: circle(0.0% at 100% 0);
+            animation: b 5s forwards;
+            display: none;
+        }
+
+        @keyframes b {
+            0% {
+                clip-path: circle(0.0% at 100% 0);
+            }
+
+            50% {
+                clip-path: circle(100.0% at 100% 0);
+            }
+
+            100% {
+                clip-path: circle(141.4% at 100% 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a" onclick="a()">
+        <h1 id="h1">click Me</h1>
+        <div id="b">
+            <h1>Lorem, ipsum.</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cupiditate dolorum perspiciatis nulla
+                incidunt quidem eos, assumenda deleniti impedit, hic laborum ad sit ea sunt libero fuga totam laudantium
+                at quia ipsam ex repellat. Doloribus, voluptatem aliquid repellat quod neque architecto, quibusdam non
+                molestiae, libero asperiores molestias? Explicabo, repudiandae itaque! Expedita culpa at quas cumque
+                fugiat exercitationem reprehenderit excepturi aspernatur tenetur? Voluptate eius minus, mollitia
+                architecto voluptatum maiores quisquam cum temporibus quae quia doloremque dolores nemo illo tempora
+                blanditiis sequi! Minima fugit doloremque necessitatibus ut officia magni fugiat beatae quas deserunt
+                ipsam. Assumenda, ut voluptatum! Rem quo sapiente quod voluptate.</p>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    function a() {
+        document.getElementById("b").style.display="block";
+        document.getElementById("h1").style.display="none";
+    }
+</script>
+
+</html>
